@@ -135,6 +135,27 @@ export PATH=$PATH:$PIN_ROOT;
 #Install angr 
 sudo -H pip install angr 
 
+#Install ropper 
+sudo -H pip install ropper 
+
+#install golang
+sudo apt-get -y install golang 
+
+# Personal config
+sudo apt-get -y install stow
+cd ~
+rm .bashrc
+git clone --recursive https://github.com/heartbleeded/dotfiles
+cd dotfiles
+chmod a+x ./install.sh
+./install.sh
+
+#install rp++
+cd ~/tools
+wget -q https://github.com/downloads/0vercl0k/rp/rp-lin-x64
+    sudo install -s rp-lin-x64 /usr/bin/rp++
+rm rp-lin-x64
+
 #install untimate vim
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
